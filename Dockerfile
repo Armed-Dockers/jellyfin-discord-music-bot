@@ -3,7 +3,7 @@ RUN apk add ffmpeg
 
 COPY . /app
 WORKDIR /app
-RUN npm install --only=production
+RUN npm install
 RUN npm run postinstall
 
 CMD node parseENV.js && npm run start
